@@ -6,7 +6,7 @@
 #else
 #define DLL_EXPORT __declspec(dllimport)
 #endif
-
+typedef int BOOL;
 
 DLL_EXPORT BOOL keyboard_open(void);
 DLL_EXPORT void keyboard_close(void);

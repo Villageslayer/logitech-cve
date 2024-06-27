@@ -1,7 +1,8 @@
-#include "keyboard.h"
+
 #include <windows.h>
 #include <stdint.h>
 #include <winternl.h>
+#include "keyboard.h"
 #pragma comment(lib, "ntdll.lib")
 
 typedef struct {

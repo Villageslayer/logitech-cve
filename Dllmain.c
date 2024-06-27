@@ -1,7 +1,7 @@
 #include <windows.h>
-#include "keyboard.h"
 #include <stdio.h>
 #include <stdint.h>
+#include "keyboard.h"
 
 // DLL entry point
 BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) {
