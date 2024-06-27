@@ -1,5 +1,7 @@
 import ctypes
+import time
 import os
+
 
 # Construct the path to the DLL
 current_dir = os.path.dirname(__file__)
@@ -22,3 +24,5 @@ wheel = 0  # Example wheel movement
 my_dll.mouse_move(button, x, y, wheel)
 
 print("Called mouse_move")
+time.sleep(5)
+exit(0)
