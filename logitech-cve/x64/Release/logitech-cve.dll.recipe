@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\FINALSMACHINE\Source\Repos\logitech-DLL\x64\Release\logitech-cve.dll</FullPath>
+      <FullPath>C:\Users\FINALSMACHINE\source\repos\logitech-DLL\x64\Release\logitech-cve.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

@@ -3,12 +3,13 @@
 C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(50,6): warning C4273: 'keyboard_open': inconsistent dll linkage
 C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(73,6): warning C4273: 'keyboard_close': inconsistent dll linkage
 C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(76,3): warning C4013: 'ZwClose' undefined; assuming extern returning int
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(85,6): warning C4273: 'press_key': inconsistent dll linkage
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(110,5): warning C4273: 'found_keyboard': inconsistent dll linkage
-     Creating library C:\Users\FINALSMACHINE\Source\Repos\logitech-DLL\x64\Release\logitech-cve.lib and object C:\Users\FINALSMACHINE\Source\Repos\logitech-DLL\x64\Release\logitech-cve.exp
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(83,6): warning C4273: 'release_key': inconsistent dll linkage
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(109,6): warning C4273: 'press_key': inconsistent dll linkage
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(134,5): warning C4273: 'found_keyboard': inconsistent dll linkage
+     Creating library C:\Users\FINALSMACHINE\source\repos\logitech-DLL\x64\Release\logitech-cve.lib and object C:\Users\FINALSMACHINE\source\repos\logitech-DLL\x64\Release\logitech-cve.exp
   Generating code
-  1 of 10 functions (10.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
+  2 of 11 functions (18.2%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
-  logitech-cve.vcxproj -> C:\Users\FINALSMACHINE\Source\Repos\logitech-DLL\x64\Release\logitech-cve.dll
+  logitech-cve.vcxproj -> C:\Users\FINALSMACHINE\source\repos\logitech-DLL\x64\Release\logitech-cve.dll

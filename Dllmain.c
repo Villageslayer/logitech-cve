@@ -25,10 +25,11 @@ BOOL WINAPI DllMain(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpReserved) {
 		}
         break;
     case DLL_PROCESS_DETACH:
-        if (!keyboard_close) {
+        if (!keyboard_close()) {
             MessageBoxA(NULL, "Failed to close keyboard device", "Error", MB_ICONERROR);
             return FALSE;
         }
+
         break;
     }
     return TRUE; // Successful DLL_PROCESS_ATTACH.
