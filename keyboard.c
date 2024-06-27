@@ -1,4 +1,4 @@
-
+#include <stdio.h>
 #include <windows.h>
 #include <stdint.h>
 #include <winternl.h>
@@ -6,8 +6,8 @@
 #pragma comment(lib, "ntdll.lib")
 
 typedef struct {
-		int unknown0;
-		int unknown1;
+		uint8_t unknown0;
+		uint8_t unknown1;
 		int button0;
 		int button1;
 		int button2;
@@ -82,7 +82,7 @@ BOOL keyboard_close(void)
 
 
 
-void press_key(int b0, int b1, int b2, int b3, int b4, int b5)
+BOOL press_key(int b0, int b1, int b2, int b3, int b4, int b5)
 {
 	KEYBOARD_IO io;
 	io.unknown0 = 0;
@@ -98,14 +98,18 @@ void press_key(int b0, int b1, int b2, int b3, int b4, int b5)
 
 	
 	if (!callkeyboard(&io)) {
+		printf("Failed to send keypress \n");
 		keyboard_close();
-		keyboard_open();
+		return 0;
+	}
+	else {
+		return 1;
 	}
 }
 
 int found_keyboard(void)
 {
-	if (g_found_keyboard)
+	if (g_found_keyboard==1)
 		return 1;
 	return 0;
 }
