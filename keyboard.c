@@ -70,14 +70,15 @@ BOOL keyboard_open(void)
 }
 
 
-void keyboard_close(void)
+BOOL keyboard_close(void)
 {
 	if (g_input != 0) {
 		ZwClose(g_input);
 		g_input = 0;
+		return 1;
 	}
+	return 0;
 }
-
 
 
 
