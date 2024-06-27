@@ -83,14 +83,14 @@ BOOL keyboard_close(void)
 BOOL release_key(void)
 {
 	KEYBOARD_IO io;
-	io.unknown0 = 0;
-	io.unknown1 = 0;
-	io.button0 = 0;
-	io.button1 = 0;
-	io.button2 = 0;
-	io.button3 = 0;
-	io.button4 = 0;
-	io.button5 = 0;
+	io.unknown0 = NULL;
+	io.unknown1 = NULL;
+	io.button0 = NULL;
+	io.button1 = NULL;
+	io.button2 = NULL;
+	io.button3 = NULL;
+	io.button4 = NULL;
+	io.button5 = NULL;
 
 
 
