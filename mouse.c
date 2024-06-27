@@ -73,7 +73,9 @@ void mouse_close(void)
 }
 
 
-void mouse_move(char button, char x, char y, char wheel)
+
+
+static mouse_move(char button, char x, char y, char wheel)
 {
 	MOUSE_IO io;
 	io.unk1 = 0;
