@@ -140,10 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Dllmain.c" />
-    <ClCompile Include="mouse.c" />
+    <ClCompile Include="keyboard.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mouse.h" />
+    <ClInclude Include="keyboard.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Dlltest.py" />
