@@ -19,7 +19,8 @@ print(f"found_keyboard returned: {found_result}")
 
 # Example call to press_key
 # Replace these values with the actual key codes you want to send
-my_dll.press_key(0x0B, 0x08, 0x0F, 0x0F, 0x12, 0)
+my_dll.press_key(0x0B, 0,0,0,0,0) # Press the 'H' key
+my_dll.press_key(0x08, 0,0,0,0,0) # Press the 'E' key
 my_dll.release_key()
 
 # Wait for a bit

@@ -1,15 +1,20 @@
-﻿  Dllmain.c
-  keyboard.c
+﻿  keyboard.c
 C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(50,6): warning C4273: 'keyboard_open': inconsistent dll linkage
 C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(73,6): warning C4273: 'keyboard_close': inconsistent dll linkage
 C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(76,3): warning C4013: 'ZwClose' undefined; assuming extern returning int
 C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(83,6): warning C4273: 'release_key': inconsistent dll linkage
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(88,13): warning C4047: '=': 'int' differs in levels of indirection from 'void *'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(89,13): warning C4047: '=': 'int' differs in levels of indirection from 'void *'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(90,13): warning C4047: '=': 'int' differs in levels of indirection from 'void *'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(91,13): warning C4047: '=': 'int' differs in levels of indirection from 'void *'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(92,13): warning C4047: '=': 'int' differs in levels of indirection from 'void *'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(93,13): warning C4047: '=': 'int' differs in levels of indirection from 'void *'
 C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(109,6): warning C4273: 'press_key': inconsistent dll linkage
 C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(134,5): warning C4273: 'found_keyboard': inconsistent dll linkage
      Creating library C:\Users\FINALSMACHINE\source\repos\logitech-DLL\x64\Release\logitech-cve.lib and object C:\Users\FINALSMACHINE\source\repos\logitech-DLL\x64\Release\logitech-cve.exp
   Generating code
-  2 of 11 functions (18.2%) were compiled, the rest were copied from previous compilation.
-    1 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+  0 of 11 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   logitech-cve.vcxproj -> C:\Users\FINALSMACHINE\source\repos\logitech-DLL\x64\Release\logitech-cve.dll
