@@ -1,15 +1,17 @@
 ﻿  Dllmain.c
-  mouse.c
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.h(11,17): error C2061: syntax error: identifier 'mouse_open'
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.h(11,17): error C2059: syntax error: ';'
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.h(11,28): error C2059: syntax error: '<parameter-list>'
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(69,6): warning C4273: 'mouse_close': inconsistent dll linkage
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(72,3): warning C4013: 'ZwClose' undefined; assuming extern returning int
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(80,25): error C2146: syntax error: missing ')' before identifier 'b0'
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(80,25): error C2061: syntax error: identifier 'b0'
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(80,25): error C2059: syntax error: ';'
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(80,28): error C2513: ' ': no variable declared before '='
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(80,82): error C2059: syntax error: ')'
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(81,1): error C2143: syntax error: missing ';' before '{'
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(81,1): error C2449: found '{' at file scope (missing function header?)
-C:\Users\FINALSMACHINE\source\repos\logitech-DLL\mouse.c(99,1): error C2059: syntax error: '}'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,35): error C2146: syntax error: missing ')' before identifier 'b0'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,35): error C2061: syntax error: identifier 'b0'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,35): error C2059: syntax error: ';'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,37): error C2059: syntax error: ','
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,97): error C2059: syntax error: ')'
+  keyboard.c
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(11,17): error C2061: syntax error: identifier 'keyboard_open'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(11,17): error C2059: syntax error: ';'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(11,31): error C2059: syntax error: '<parameter-list>'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,35): error C2146: syntax error: missing ')' before identifier 'b0'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,35): error C2061: syntax error: identifier 'b0'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,35): error C2059: syntax error: ';'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,37): error C2059: syntax error: ','
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.h(13,97): error C2059: syntax error: ')'
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(74,6): warning C4273: 'keyboard_close': inconsistent dll linkage
+C:\Users\FINALSMACHINE\source\repos\logitech-DLL\keyboard.c(77,3): warning C4013: 'ZwClose' undefined; assuming extern returning int

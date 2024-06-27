@@ -85,7 +85,6 @@ void keyboard_close(void)
 void press_key(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3, uint8_t b4, uint8_t b5)
 {
 	KEYBOARD_IO io;
-	{
 		io.unknown0 = 0;
 		io.unknown1 = 0;
 		io.button0 = b0;
@@ -94,7 +93,7 @@ void press_key(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3, uint8_t b4, uint8
 		io.button3 = b3;
 		io.button4 = b4;
 		io.button5 = b5;
-	}; 
+	
 	
 
 	
