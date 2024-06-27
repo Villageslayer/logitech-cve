@@ -2,7 +2,6 @@ import ctypes
 import time
 import os
 
-
 # Construct the path to the DLL
 current_dir = os.path.dirname(__file__)
 dll_path = os.path.join(current_dir, 'x64', 'release', 'logitech-cve.dll')
@@ -10,19 +9,22 @@ dll_path = os.path.join(current_dir, 'x64', 'release', 'logitech-cve.dll')
 # Load the DLL
 my_dll = ctypes.CDLL(dll_path)
 
-# Define argument and return types for the functions you'll call
-# This is an example assuming mouse_move takes four integers and returns void
-my_dll.mouse_move.argtypes = (ctypes.c_int, ctypes.c_int, ctypes.c_int, ctypes.c_int)
-my_dll.mouse_move.restype = None
+# Assuming keyboard_open and keyboard_close take no arguments and return an int
+my_dll.keyboard_open.argtypes = ()
+my_dll.keyboard_open.restype = ctypes.c_int
 
-# Example call to mouse_move
-# Replace these arguments with what your function expects
-button = 0  # Example button code
-x = 100  # Example x position
-y = 100  # Example y position
-wheel = 0  # Example wheel movement
-my_dll.mouse_move(button, x, y, wheel)
+my_dll.keyboard_close.argtypes = ()
+my_dll.keyboard_close.restype = ctypes.c_int
 
-print("Called mouse_move")
+# Call keyboard_open
+open_result = my_dll.keyboard_open()
+print(f"keyboard_open returned: {open_result}")
+
+# Wait for a bit before closing the keyboard
 time.sleep(5)
+
+# Call keyboard_close
+close_result = my_dll.keyboard_close()
+print(f"keyboard_close returned: {close_result}")
+
 exit(0)
