@@ -103,3 +103,9 @@ void press_key(int b0, int b1, int b2, int b3, int b4, int b5)
 	}
 }
 
+int found_keyboard(void)
+{
+	if (g_found_keyboard)
+		return 1;
+	return 0;
+}
