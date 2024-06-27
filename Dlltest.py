@@ -15,7 +15,7 @@ my_dll.mouse_move.restype = None
 
 # Example call to mouse_move
 # Replace these arguments with what your function expects
-button = 1  # Example button code
+button = 0  # Example button code
 x = 100  # Example x position
 y = 100  # Example y position
 wheel = 0  # Example wheel movement
