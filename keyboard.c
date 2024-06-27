@@ -1,20 +1,18 @@
 #include "keyboard.h"
 #include <windows.h>
-#include <stdio.h>
 #include <stdint.h>
 #include <winternl.h>
 #pragma comment(lib, "ntdll.lib")
 
-typedef struct KEYBOARD_IO
-{
-	uint8_t unknown0;
-	uint8_t unknown1;
-	uint8_t button0;
-	uint8_t button1;
-	uint8_t button2;
-	uint8_t button3;
-	uint8_t button4;
-	uint8_t button5;
+typedef struct {
+		int unknown0;
+		int unknown1;
+		int button0;
+		int button1;
+		int button2;
+		int button3;
+		int button4;
+		int button5;
 } KEYBOARD_IO;
 
 
@@ -82,17 +80,17 @@ void keyboard_close(void)
 
 
 
-void press_key(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3, uint8_t b4, uint8_t b5)
+void press_key(int b0, int b1, int b2, int b3, int b4, int b5)
 {
 	KEYBOARD_IO io;
-		io.unknown0 = 0;
-		io.unknown1 = 0;
-		io.button0 = b0;
-		io.button1 = b1;
-		io.button2 = b2;
-		io.button3 = b3;
-		io.button4 = b4;
-		io.button5 = b5;
+	io.unknown0 = 0;
+	io.unknown1 = 0;
+	io.button0 = b0;
+	io.button1 = b1;
+	io.button2 = b2;
+	io.button3 = b3;
+	io.button4 = b4;
+	io.button5 = b5;
 	
 	
 

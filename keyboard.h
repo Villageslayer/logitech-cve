@@ -10,7 +10,7 @@
 
 DLL_EXPORT BOOL keyboard_open(void);
 DLL_EXPORT void keyboard_close(void);
-DLL_EXPORT void press_key(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3, uint8_t b4, uint8_t b5);
+DLL_EXPORT void press_key(int b0, int b1, int b2, int b3, int b4, int b5);
 
 
 #endif // KEYBOARD_H
