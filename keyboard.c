@@ -80,6 +80,30 @@ BOOL keyboard_close(void)
 	return 0;
 }
 
+BOOL release_key(void)
+{
+	KEYBOARD_IO io;
+	io.unknown0 = 0;
+	io.unknown1 = 0;
+	io.button0 = 0;
+	io.button1 = 0;
+	io.button2 = 0;
+	io.button3 = 0;
+	io.button4 = 0;
+	io.button5 = 0;
+
+
+
+
+	if (!callkeyboard(&io)) {
+		printf("Failed to release keypress \n");
+		keyboard_close();
+		return 0;
+	}
+	else {
+		return 1;
+	}
+}
 
 
 BOOL press_key(int b0, int b1, int b2, int b3, int b4, int b5)
