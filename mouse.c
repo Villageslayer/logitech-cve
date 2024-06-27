@@ -1,15 +1,22 @@
 #include "mouse.h"
 #include <windows.h>
+#include <stdio.h>
+#include <stdint.h>
 #include <winternl.h>
 #pragma comment(lib, "ntdll.lib")
 
-typedef struct {
-	char button;
-	char x;
-	char y;
-	char wheel;
-	char unk1;
-} MOUSE_IO;
+typedef struct KEYBOARD_IO
+{
+	uint8_t unknown0;
+	uint8_t unknown1;
+	uint8_t button0;
+	uint8_t button1;
+	uint8_t button2;
+	uint8_t button3;
+	uint8_t button4;
+	uint8_t button5;
+} KEYBOARD_IO;
+
 
 #define MOUSE_PRESS 1
 #define MOUSE_RELEASE 2
@@ -19,12 +26,12 @@ typedef struct {
 static HANDLE g_input;
 static IO_STATUS_BLOCK g_io;
 
-BOOL g_found_mouse;
+BOOL g_found_keyboard;
 
-static BOOL callmouse(MOUSE_IO* buffer)
+static BOOL callkeyboard(KEYBOARD_IO* buffer)
 {
 	IO_STATUS_BLOCK block;
-	return NtDeviceIoControlFile(g_input, 0, 0, 0, &block, 0x2a2010, buffer, sizeof(MOUSE_IO), 0, 0) == 0L;
+	return NtDeviceIoControlFile(g_input, 0, 0, 0, &block, 0x2A200C, buffer, sizeof(KEYBOARD_IO), 0, 0) == 0L;
 }
 
 static NTSTATUS device_initialize(PCWSTR device_name)
@@ -41,7 +48,7 @@ static NTSTATUS device_initialize(PCWSTR device_name)
 	return status;
 }
 
-BOOL mouse_open(void)
+BOOL keyboard_open(void)
 {
 	NTSTATUS status = 0;
 
@@ -52,19 +59,19 @@ BOOL mouse_open(void)
 
 		status = device_initialize(buffer0);
 		if (NT_SUCCESS(status))
-			g_found_mouse = 1;
+			g_found_keyboard = 1;
 		else {
 			wchar_t buffer1[] = L"\\??\\ROOT#SYSTEM#0001#{1abc05c0-c378-41b9-9cef-df1aba82b015}";
 			status = device_initialize(buffer1);
 			if (NT_SUCCESS(status))
-				g_found_mouse = 1;
+				g_found_keyboard = 1;
 		}
 	}
 	return status == 0;
 }
 
 
-void mouse_close(void)
+void keyboard_close(void)
 {
 	if (g_input != 0) {
 		ZwClose(g_input);
@@ -75,18 +82,25 @@ void mouse_close(void)
 
 
 
-static mouse_move(char button, char x, char y, char wheel)
+void press_key(uint8_t b0, uint8_t b1, uint8_t b2, uint8_t b3, uint8_t b4, uint8_t b5)
 {
-	MOUSE_IO io;
-	io.unk1 = 0;
-	io.button = button;
-	io.x = x;
-	io.y = y;
-	io.wheel = wheel;
+	KEYBOARD_IO io;
+	{
+		io.unknown0 = 0;
+		io.unknown1 = 0;
+		io.button0 = b0;
+		io.button1 = b1;
+		io.button2 = b2;
+		io.button3 = b3;
+		io.button4 = b4;
+		io.button5 = b5;
+	}; 
+	
 
-	if (!callmouse(&io)) {
-		mouse_close();
-		mouse_open();
+	
+	if (!callkeyboard(&io)) {
+		keyboard_close();
+		keyboard_open();
 	}
 }
 
